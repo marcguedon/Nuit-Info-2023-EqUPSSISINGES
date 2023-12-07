@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .gauge {
+      width: 300px;
+      height: 30px;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+    .fill {
+      height: 100%;
+      background-color: #4CAF50;
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gauge">
+  <div class="fill" style="width: 50%;"></div>
+</div>
+
+<script>
+  let currentValue = 50; // Initial value
+
+  function updateGauge(value) {
+    // Update the gauge value based on the input
+    if (value === 1 && currentValue < 100) {
+      currentValue += 10;
+    } else if (value === 0 && currentValue > 0) {
+      currentValue -= 10;
+    }
+
+    // Update the fill element width
+    document.querySelector('.fill').style.width = currentValue + '%';
+  }
+
+  // Example usage:
+  // Increase by 10%
+  updateGauge(1);
+
+  // Decrease by 10%
+  // updateGauge(0);
+</script>
+
+</body>
+</html>
