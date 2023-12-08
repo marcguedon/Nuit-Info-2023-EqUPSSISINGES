@@ -1,8 +1,9 @@
 .gauge-container {
-    height: 600px;
+    height: 500px;
     position: relative;
     display: flex;
     align-items: flex-end;
+    flex: 1;
   }
   
   .gauge {
@@ -77,12 +78,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .footer {
     background: #1e2f41;
     color: #fff;
     padding: 20px 0;
+    margin-bottom: auto;
 }
 
 .footer-content {
@@ -179,4 +182,6 @@ background-color: #4137d1; /* Nouvelle couleur de fond */
 color: #ffffff; /* Nouvelle couleur du texte */
 }
 
-
+.main-content {
+    flex: 1;
+  }
