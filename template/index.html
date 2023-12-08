@@ -3,49 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .gauge {
-      width: 300px;
-      height: 30px;
-      border: 1px solid #000;
-      position: relative;
-    }
-
-    .fill {
-      height: 100%;
-      background-color: #4CAF50;
-      transition: width 0.5s ease;
-    }
-  </style>
+  <link rel="stylesheet" href="../style/style_index.css">
+  <link rel="stylesheet" href="../style/style_header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<style>
+
+
+    
+  </style>
+
 <body>
 
-<div class="gauge">
-  <div class="fill" style="width: 50%;"></div>
+    <header class="main-head">
+        <nav>
+            <!-- Utiliser l'icône du menu -->
+            <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+            </button>
+
+            <h1 id="logo">Nuit de l'info</h1>
+
+            <!-- Ajouter une liste de menu (horizontal) -->
+            <ul class="menu-list">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Escape Game</a></li>
+                <li><a href="#">ekip</a></li>
+                <li><button id="bttheme" onclick="toggleSnowfall()"></button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            // Sélectionner le header
+            var mainHead = document.querySelector('.main-head');
+
+            // Sélectionner la liste de menu
+            var menuList = document.querySelector('.menu-list');
+
+            // Inverser la visibilité en ajoutant ou supprimant la classe 'visible'
+            menuList.classList.toggle('visible');
+
+            // Ajouter ou supprimer la classe 'menu-opened' pour changer le fond du header
+            mainHead.classList.toggle('menu-opened');
+        }
+    </script>
+
+
+<div class="gauge-container">
+  <div class="gauge">
+    <div class="gauge-block">
+      <div class="fill" style="height: 50%;"></div>
+    </div>
+  </div>
+
+  <button id="buttonValue" onclick="increaseValue()">Augmenter</button>
+  <button id="buttonValue" onclick="decreaseValue()">Diminuer</button>
 </div>
 
-<script>
-  let currentValue = 50; // Initial value
+<!-- Ajout de l'élément canvas pour flocons -->
+<canvas id="snowfall-canvas"></canvas>
 
-  function updateGauge(value) {
-    // Update the gauge value based on the input
-    if (value === 1 && currentValue < 100) {
-      currentValue += 10;
-    } else if (value === 0 && currentValue > 0) {
-      currentValue -= 10;
-    }
+<!-- Boîte de dialogue personnalisée -->
+<div class="custom-alert" id="customAlert">
+  <p>Essayez une autre fois, vous pouvez le faire !</p>
+  <button class="custom-alert-button" onclick="closeCustomAlert('customAlert')">OK</button>
+</div>
 
-    // Update the fill element width
-    document.querySelector('.fill').style.width = currentValue + '%';
-  }
+<div class="custom-alert" id="congratulationsAlert">
+  <p>Bien joué !</p>
+  <button class="custom-alert-button" onclick="closeCustomAlert('congratulationsAlert')">OK</button>
+</div>
 
-  // Example usage:
-  // Increase by 10%
-  updateGauge(1);
+<script src="../public/script/script_jauge.js"></script>
+<script src="../public/script/script_neige.js"></script>
 
-  // Decrease by 10%
-  // updateGauge(0);
-</script>
 
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <p>Ce site a été réalisé par l'équipe "UPSSISINGES" dans le cadre de la nuit de l'informatique 2023</p>
+        </div>
+        <div class="footer-section logo">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/upssisinge/">
+                <img src="../public/img/logoUpssisinges.png" alt="Logo Upssisinges" id="logoUpssisinges"/>
+            </a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajouter le lien vers Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style_header.css">
+    <style>
+        /* Ajouter du style pour cacher initialement le menu */
+        .menu-list {
+            opacity: 0;
+            visibility: hidden;
+            list-style: none;
+            padding:0;
+            margin:0;
+            transition: opacity 0.3s ease, visibility 0.3s ease; /* Ajouter une transition pour l'opacité et la visibilité */
+        }
+
+        /* Ajouter du style pour afficher le menu lorsqu'il a la classe "visible" */
+        .menu-list.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Ajouter du style pour la navigation */
+        nav {
+            display: flex;
+            align-items: center; /* Aligner les éléments verticalement au centre */
+            transition: background-color 0.3s ease; /* Ajouter une transition pour l'effet de fondu */
+        }
+
+        /* Ajouter du style pour le bouton du menu */
+        .menu-toggle {
+            
+            background-color: #0a2b19; /* Couleur de fond du bouton */
+            color: #ffffff; /* Couleur du texte */
+            padding: 10px 15px; /* Espacement interne du bouton */
+            border: 1px solid #0a2b19; /* Couleur de la bordure */
+            border-radius: 5px; /* Bordures arrondies */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Ajouter une transition pour les couleurs */
+        }
+
+        /* Modifier la couleur du bouton lorsque survolé */
+        .menu-toggle:hover {
+            background-color: #0a2b19; /* Nouvelle couleur de fond */
+            color: #ffffff; /* Nouvelle couleur du texte */
+        }
+
+        /* Ajouter du style pour le fond du header lorsqu'il est ouvert */
+        .main-head.menu-opened {
+            background-color: #0a2b19; /* Couleur de fond lorsque le menu est ouvert */
+        }
+        .menu-list li {
+            margin-right:200px;
+        }
+        .menu-toggle:hover {
+    background-color: #136e2b; /* Nouvelle couleur de fond */
+    color: #ffffff; /* Nouvelle couleur du texte */
+        }
+    </style>
+    <title>Nuit de l'info</title>
+</head> 
+
+<body>
+
+    <header class="main-head">
+        <nav>
+            <!-- Utiliser l'icône du menu -->
+            <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+            </button>
+
+            <h1 id="logo">Nuit de l'info</h1>
+
+            <!-- Ajouter une liste de menu (horizontal) -->
+            <ul class="menu-list">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Escape Game</a></li>
+                <li><a href="#">ekip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            // Sélectionner le header
+            var mainHead = document.querySelector('.main-head');
+
+            // Sélectionner la liste de menu
+            var menuList = document.querySelector('.menu-list');
+
+            // Inverser la visibilité en ajoutant ou supprimant la classe 'visible'
+            menuList.classList.toggle('visible');
+
+            // Ajouter ou supprimer la classe 'menu-opened' pour changer le fond du header
+            mainHead.classList.toggle('menu-opened');
+        }
+    </script>
+
+</body>
+
+</html>
