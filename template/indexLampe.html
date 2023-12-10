@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/style/lampe.css">
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="../public/style/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="../public/script/header.js"></script>
+    </head>
+
+    <body>
+        <div class="background-image"></div>
+
+        <header>
+            <nav>
+                <!-- Utiliser l'icône du menu -->
+                <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                    <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+                </button>
+
+                <h1 id="logo">Nuit de l'info</h1>
+
+                <!-- Ajouter une liste de menu (horizontal) -->
+                <ul class="menu-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="indexEscape.html">Escape Game</a></li>
+                    <li><a href="indexJeu.html">Jeu</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="tetris.html">Tetris 404</a></li>
+                    <li><a href="https://sitequinesistepas.fr">Se connecter</a></li>
+                </ul>
+
+                <button id="bttheme" onclick="toggleSnowfall()"></button>
+            </nav>
+        </header>
+
+        <div class="game-image">
+            <img src="../public/img/fondfonceCLARA.png">
+        </div>
+
+        <div id="clickable-area" class="clickable-area"></div>
+
+        <div id="popup" class="popup">
+            <div id="game-container">
+            <!-- Cards will go here -->
+            </div>
+
+            <div id="score-container">
+                <button id="close-popup-btn">Fermer le jeu</button>
+            </div>
+        </div>
+        
+        <script src="../public/script/scriptLampe.js"></script>
+
+        <!-- Ajout de l'élément canvas pour flocons -->
+        <canvas id="snowfall-canvas"></canvas>
+        <script src="../public/script/script_neige.js"></script>
+    </body>
+</html>

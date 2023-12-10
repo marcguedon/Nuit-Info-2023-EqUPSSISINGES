@@ -1,0 +1,101 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game{
+    display: inline-block;
+    position: relative;
+}
+
+#UIDEBAR{
+    background-color: white;
+    width: 200px;
+    position:absolute;
+    top: 50px;
+    left: 10px;
+    border: 4px black solid;
+    padding: 4px;
+}
+
+#TXTMECHANT{
+    font-size: 16px;
+}
+
+#ennemyHealthBar{
+    height: 5px;
+    background-color: green;
+    position:absolute;
+    top: 0;
+    left:0;
+    right:0;
+}
+
+#UIDHBAR{
+    background-color: white;
+    width: 200px;
+    position:absolute;
+    top: 330px;
+    right: 10px;
+    border: 4px black solid;
+    padding: 4px;
+}
+
+#TXTGENTIL{
+    font-size: 16px;
+}
+
+#allieHealthBar{
+    height: 5px;
+    background-color: green;
+    position:absolute;
+    top: 0;
+    left:0;
+    right:0;
+}
+
+#LISTECREATURE{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    position:absolute;
+    top:30px;
+    left:150px;
+    border: 2px black solid;
+    display: inline-grid;
+    font-size: 15px;
+}
+
+#ATTACK{
+    background-color: white;
+    height: 75px;
+    width: 500px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    border: 4px black solid;
+    display: flex;
+}
+
+#dialogueBox{
+    position:absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    background-color: white;
+    padding:12px;
+    display:none;
+    cursor:pointer;
+}
+
+.background-image {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: url('../img/image/Battle.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+    filter: blur(5px);
+}

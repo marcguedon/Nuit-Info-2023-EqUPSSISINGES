@@ -1,0 +1,157 @@
+/* HEADER CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #336699;
+}
+
+header{
+    background: rgb(5, 4, 82);
+    color: #ffffff;
+}
+
+header h1{
+    font-size: 1.7rem;
+    margin-left: 27px;
+    margin-right: 5px;
+}
+
+header li{
+    font-size: 1.2rem;
+}
+
+header nav{
+    min-height: 10vh;
+    width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    display: flex;
+    align-items: center; /* Aligner les éléments verticalement au centre */
+    transition: background-color 0.3s ease; /* Ajouter une transition pour l'effet de fondu */
+}
+
+header nav ul{
+    display : flex;
+    justify-content: space-around;/*justify-content: space-between;*/
+    align-items: center;
+    list-style: none; 
+    width: 50%;
+    margin-left: 50px;
+}
+
+header nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+header #bttheme{
+    border: none;
+    background: url('../img/image-chapeau.png') no-repeat;/* Remplacez le chemin par votre propre chemin */
+    background-size: contain; /* Ajuste la taille de l'image pour s'adapter au bouton */
+    width: 40px; /* Ajustez la largeur selon vos besoins */
+    height: 40px; /* Ajustez la hauteur selon vos besoins */
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* Ajouter du style pour le bouton du menu */
+.menu-toggle {
+    
+    background-color: rgb(5, 4, 82); /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 15px; /* Espacement interne du bouton */
+    border: 1px solid rgb(5, 4, 82); /* Couleur de la bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Ajouter une transition pour les couleurs */
+}
+
+/* Modifier la couleur du bouton lorsque survolé */
+.menu-toggle:hover {
+    background-color: #4137d1; /* Nouvelle couleur de fond */
+    color: #ffffff; /* Nouvelle couleur du texte */
+}
+
+/* HEADER */
+.menu-list {
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Ajouter une transition pour l'opacité et la visibilité */
+}
+
+/* Ajouter du style pour afficher le menu lorsqu'il a la classe "visible" */
+.menu-list.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer {
+    background: #1e2f41;
+    background: rgba(30, 47, 65, 1);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section p {
+    color: #aaa;
+    margin: 0;
+}
+
+.footer-section.logo {
+    text-align: right;
+}
+
+.footer-section.logo img {
+    width: 50px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+.footer-section.logo a {
+    text-decoration: none;
+}
+
+.footer-section.logo a:hover {
+    opacity: 0.8; /* Ajoutez un effet de survol si nécessaire */
+}
+
+#snowfall-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Mettez le canvas en arrière-plan */
+    background-color: transparent;
+}

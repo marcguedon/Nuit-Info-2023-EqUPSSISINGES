@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tetris</title>
+        <link rel="stylesheet" href="../public/style/tetris.css">
+        <link rel="stylesheet" href="../public/style/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="../public/script/header.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- Utiliser l'icône du menu -->
+                <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                    <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+                </button>
+
+                <h1 id="logo">Nuit de l'info</h1>
+
+                <!-- Ajouter une liste de menu (horizontal) -->
+                <ul class="menu-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="indexEscape.html">Escape Game</a></li>
+                    <li><a href="indexJeu.html">Jeu</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="https://sitequinesistepas.fr">Se connecter</a></li>
+                </ul>
+
+                <button id="bttheme" onclick="toggleSnowfall()"></button>
+            </nav>
+        </header>
+
+        <div class="mainBody">
+            <div id="load">
+                <div>r</div>
+                <div>o</div>
+                <div>r</div>
+                <div>r</div>
+                <div>E</div>
+                <div></div>
+                <div>4</div>
+                <div>0</div>
+                <div>4</div>
+            </div>
+
+            <h1 class="error1">Oops! Page not Found.</h1>
+            <h2 class="error2">Tetris is here to save the day!</h2>
+            <div id="score">0</div>
+            <p id="levels"></p>
+
+            <canvas id="tetris" width="240" height="400"></canvas>
+
+            <div class="controls">
+                <button id="start_game">Commencer</button>
+                <button id="restart_game">Rejouer</button>
+                <button id="pause_game">Pauser</button>
+                <button id="continue_game">Continuer</button>
+                <button id="help_button" title="←↓→  D rotation Gauche Q">Aide</button>
+            </div>
+        </div>
+
+        <!-- Ajout de l'élément canvas pour flocons -->
+        <canvas id="snowfall-canvas"></canvas>
+        <script src="../public/script/tetris_app.js"></script>
+        <!-- <script src="../public/script/script_neige.js"></script> -->
+    </body>
+</html>

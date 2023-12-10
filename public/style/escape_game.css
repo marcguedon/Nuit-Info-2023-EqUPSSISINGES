@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background: url('fondEscapeGame.png') no-repeat center center fixed;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modal {
+    height: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    padding-top: 0;
+    background-color: #fff;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clickable-area {
+    position: absolute;
+    display: flex;
+    top: 425px;
+    left: 953px;
+    width: 100px;
+    height: 100px;
+    background: transparent;/* rgba(255, 0, 0, 0.3);*/
+    cursor: pointer;
+}
+
+#background-image {
+    width: 30vw;
+}
+
+.hidden-item {
+    position: absolute;
+    display: inline-block;
+    font-size: 24px;
+    color: transparent;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+#game-container p {
+    color: black;
+}
+

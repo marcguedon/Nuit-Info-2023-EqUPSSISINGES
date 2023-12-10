@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Une petite page HTML</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../public/style/jeu.css">
+        <link rel="stylesheet" href="../public/style/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="../public/script/header.js"></script>
+    </head>
+    <body>
+        <div class="background-image"></div>
+
+        <header>
+            <nav>
+                <!-- Utiliser l'icône du menu -->
+                <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                    <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+                </button>
+
+                <h1 id="logo">Nuit de l'info</h1>
+
+                <!-- Ajouter une liste de menu (horizontal) -->
+                <ul class="menu-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="indexEscape.html">Escape Game</a></li>
+                    <li><a href="indexJeu.html">Jeu</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="tetris.html">Tetris 404</a></li>
+                    <li><a href="https://sitequinesistepas.fr">Se connecter</a></li>
+                </ul>
+
+                <button id="bttheme" onclick="toggleSnowfall()"></button>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="game">
+                <div id="UIDEBAR">
+                    <h1 id="TXTMECHANT">Mechant</h1>
+                    <div style="position:relative;">
+                        <div style="height: 5px;background-color: #ddd;margin-top: 10px;"></div>
+                        <div id="ennemyHealthBar"></div>
+                    </div>
+                </div>
+
+                <div id="UIDHBAR">
+                    <h1 id="TXTGENTIL">Gentil</h1>
+                    <div style="position:relative;">
+                        <div style="height: 5px;background-color: #ddd;margin-top: 10px;"></div>
+                        <div id="allieHealthBar"></div>
+                    </div>
+                </div>
+
+                <canvas></canvas>
+                <div id="LISTECREATURE">
+                        <button id="POKEMON1">Pokemon1</button>
+                        <button id="POKEMON2">Pokemon2</button>
+                        <button id="POKEMON3">Pokemon3</button>
+                        <button id="POKEMON4">Pokemon4</button>
+                        <button id="POKEMON5">Pokemon5</button>
+                        <button id="POKEMON6">Pokemon6</button>
+                        <button id="PAGEUP">Page Suivante</button>
+                        <button id="PAGEDOWN">Page Précédente</button>  
+                        <button id="ANNULER">Annuler</button>
+                    </div>
+                <div id="ATTACK">
+                    <div id="dialogueBox">test</div>
+                    <div style="width: 66.66%;
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr)">
+                            <button id="Attack1">Attack1</button>
+                            <button id="Attack2">Attack2</button>
+                            <button id="Attack3">Attack3d</button>
+                            <button id="Attack4">Attack4</button>
+                    </div>
+                    <div style="display:grid;
+                                align-items: center;
+                                justify-content: center;
+                                width:33.33%;
+                                border-left: 4px black solid;">
+                        <button id="FUITE">Fuite</button>
+                        <button id="ATTRAPER">Attraper</button>
+                        <button id="CREATURE">Créature</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ajout de l'élément canvas pour flocons -->
+        <canvas id="snowfall-canvas"></canvas>
+        <script src="../public/script/script_neige.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        ></script>
+        <script src="../public/script/fonction.js"></script>
+        <script src="../public/script/loadimage.js"></script>
+        <script src="../public/script/class.js"></script>
+        <script src="../public/script/k.js"></script>
+        <script src="../public/script/index.js"></script>
+    </body>
+</html>
