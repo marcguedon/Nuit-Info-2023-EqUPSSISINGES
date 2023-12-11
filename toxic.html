@@ -2,11 +2,13 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Escape Game</title>
-        <link rel="stylesheet" href="../public/style/escape.css">
-        <link rel="stylesheet" href="../public/style/header.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UPSSISINGES - Escape Game 3</title>
+        <link rel="stylesheet" href="public/style/escape_game.css">
+        <link rel="stylesheet" href="public/style/header.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <script src="../public/script/header.js"></script>
+        <script src="public/script/header.js"></script>
+        <script src="public/script/script_escape_game.js"></script>
     </head>
 
     <body>
@@ -35,31 +37,30 @@
             </nav>
         </header>
 
-        <div class="escapeGame">
-            <div class="dialogue-container">
-                <div class="dialogue-box">
-                    <img src="../public/img/normal.png" alt="Noctisinus" class="dialogue-image">
-                    <p id="dialogueText"></p>
-                </div>
-                
-                <div class="input-container" id="inputContainer" style="display: none;">
-                    <input type="text" id="playerNameInput" placeholder="Entrez votre nom">
-                    <button id="sendButton">Envoyer</button>
-                </div>
+        <div class="game-image">
+            <img src="public/img/fondEscapeGame.png">
+        </div>
 
-                <div id="choiceButtons" style="display: none;">
-                    <button id="ouiButton">Oui</button>
-                    <button id="nonButton">Non</button>
-                </div>
+        <div id="clickable-area" onclick="openModal()"></div>
 
-                <button id="suivant" style="display: none;" onclick="clikok()">Ok</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="game-container">
+                    <img id="background-image" src="public/img/pollution.jpg" alt="Background Image">
+                    <p>Instructions: Trouver les lettres cachées afin de former un mot puis appuyer sur le bouton "Jouer"</p>
+                    <form id="user-input-form">
+                        <input type="text" id="userInput">
+                        <button type="button" id="playButton" onclick="initializeGame()">Jouer</button>
+                    </form>
+                    <p id="result"></p>
+                    <button id="closeResultButton" onclick="closeModalAndReset()">Fermer</button>
+                </div>
             </div>
         </div>
 
         <!-- Ajout de l'élément canvas pour flocons -->
         <canvas id="snowfall-canvas"></canvas>
-        <script src="../public/script/script_neige.js"></script>
-
-        <script src="../public/script/main.js"></script>
+        <script src="public/script/script_neige.js"></script>
     </body>
 </html>

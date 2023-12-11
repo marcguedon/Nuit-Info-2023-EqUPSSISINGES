@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>UPSSISINGES - Escape Game 1</title>
+        <link rel="stylesheet" href="public/style/escape.css">
+        <link rel="stylesheet" href="public/style/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="public/script/header.js"></script>
+    </head>
+
+    <body>
+        <div class="background-image"></div>
+
+        <header>
+            <nav>
+                <!-- Utiliser l'icône du menu -->
+                <button type="button" class="menu-toggle" onclick="toggleMenu()">
+                    <span class="fa-solid fa-bars fa-xl" aria-hidden="true" aria></span>
+                </button>
+
+                <h1 id="logo">Nuit de l'info</h1>
+
+                <!-- Ajouter une liste de menu (horizontal) -->
+                <ul class="menu-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="indexEscape.html">Escape Game</a></li>
+                    <li><a href="indexJeu.html">Jeu</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="tetris.html">Tetris 404</a></li>
+                    <li><a href="https://sitequinesistepas.fr">Se connecter</a></li>
+                </ul>
+
+                <button id="bttheme" onclick="toggleSnowfall()"></button>
+            </nav>
+        </header>
+
+        <div class="escapeGame">
+            <div class="dialogue-container">
+                <div class="dialogue-box">
+                    <img src="public/img/normal.png" alt="Noctisinus" class="dialogue-image">
+                    <p id="dialogueText"></p>
+                </div>
+                
+                <div class="input-container" id="inputContainer" style="display: none;">
+                    <input type="text" id="playerNameInput" placeholder="Entrez votre nom">
+                    <button id="sendButton">Envoyer</button>
+                </div>
+
+                <div id="choiceButtons" style="display: none;">
+                    <button id="ouiButton">Oui</button>
+                    <button id="nonButton">Non</button>
+                </div>
+
+                <button id="suivant" style="display: none;" onclick="clikok()">Ok</button>
+            </div>
+        </div>
+
+        <!-- Ajout de l'élément canvas pour flocons -->
+        <canvas id="snowfall-canvas"></canvas>
+        <script src="public/script/script_neige.js"></script>
+
+        <script src="public/script/main.js"></script>
+    </body>
+</html>

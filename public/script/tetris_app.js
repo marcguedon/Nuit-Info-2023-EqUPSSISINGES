@@ -394,27 +394,27 @@ document.getElementById("start_game").addEventListener("click", function () {
 });
 
 //changer les couleurs du gradient du body apres click sur le toggle
-function changeColor() {
-    var body = document.querySelector('body');
-    var toggleCheckbox = document.getElementById('toggle_checkbox');
-    let gradient_colors = [];
+// function changeColor() {
+//     var body = document.querySelector('body');
+//     var toggleCheckbox = document.getElementById('toggle_checkbox');
+//     let gradient_colors = [];
     
-    if (toggleCheckbox.checked) {
-    // Toggle is checked, do something...
-        gradient_colors = ["#3E76A0", "#5A94BB", "#79B1D4", "#A3D8F6"]
-    } else {
-        gradient_colors = ["#35475F", "#242B4B", "#161B36", "#0B1026"]
-    }
+//     if (toggleCheckbox.checked) {
+//     // Toggle is checked, do something...
+//         gradient_colors = ["#3E76A0", "#5A94BB", "#79B1D4", "#A3D8F6"]
+//     } else {
+//         gradient_colors = ["#35475F", "#242B4B", "#161B36", "#0B1026"]
+//     }
 
-    body.style.background = "linear-gradient(-45deg, " + gradient_colors[0] + ", " + gradient_colors[1] + ", " + gradient_colors[2] + ", " + gradient_colors[3] + ")";
-    var toggleLabel = document.getElementById('icon-label');
+//     body.style.background = "linear-gradient(-45deg, " + gradient_colors[0] + ", " + gradient_colors[1] + ", " + gradient_colors[2] + ", " + gradient_colors[3] + ")";
+//     var toggleLabel = document.getElementById('icon-label');
     
-    if (toggleCheckbox.checked) {
-        toggleLabel.style.backgroundImage = "url('img/snowflake.png')";
-    } else {
-        toggleLabel.style.backgroundImage = "url('img/moon.png')";
-    }
-}
+//     if (toggleCheckbox.checked) {
+//         toggleLabel.style.backgroundImage = "url('img/snowflake.png')";
+//     } else {
+//         toggleLabel.style.backgroundImage = "url('img/moon.png')";
+//     }
+// }
 
 function handle404Error() {
     // Replace the content of the page with your custom 404 message

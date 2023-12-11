@@ -1,31 +1,19 @@
-body {
-    /*margin: 0;
-    padding: 0;
+.game-image {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../img/fondEscapeGame.png');
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif; 
-    color: #ffffff; */
-    margin: 0;
-        overflow: hidden;
-        position: relative;
-        background: url('../img/fondEscapeGame.png') no-repeat center center fixed;
-        background-size: contain;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+    height: 85vh;
+    margin-top: 15px;
+    position: relative;
 }
 
 .modal {
     height: 0;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #clickable-area {
@@ -64,7 +52,7 @@ body {
     color: transparent;
 }
 
-button {
+.modal button {
     margin-top: 10px;
     font-size: 16px;
 }
@@ -79,3 +67,12 @@ button {
     color: black;
 }
 
+.background-image {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: url('../img/fondEscapeGame.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+    filter: blur(5px);
+}

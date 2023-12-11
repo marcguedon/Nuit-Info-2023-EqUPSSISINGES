@@ -1,7 +1,8 @@
 .game-image {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 85vh;
+    margin-top: 15px;
 }
 
 .game-image img {
@@ -9,8 +10,9 @@
 }
 
 .popup #game-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     max-width: 600px;
     margin: 20px auto;
 }
@@ -36,7 +38,6 @@ button#close-popup-btn {
 .card {
     width: 100px;
     height: 100px;
-    margin: 10px;
     background-color: #ccc;
     border: 1px solid #999;
     cursor: pointer;
@@ -47,7 +48,7 @@ button#close-popup-btn {
 
 .popup #score-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .card.matched {
