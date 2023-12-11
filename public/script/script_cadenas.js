@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('result').innerHTML = 'Félicitations ! Vous avez réussi.';
                 document.getElementById('user-input-form').style.display = 'none';
                 closeResultButton.style.display = 'block';
+                //window.location.href = 'image.html';
             }
             
             else {
@@ -65,7 +66,7 @@ function initializeGame() {
         clickableArea.style.display = 'none';
         document.getElementById('user-input-form').style.display = 'none';
         closeResultButton.style.display = 'block';
-        backgroundImage.src = "public/img/cadenas_ouv.png";
+        backgroundImage.src = "public/img/escapeGame/cadenas_ouv.png";
         backgroundImage.alt = "Image 2";
     }
     
@@ -76,20 +77,7 @@ function initializeGame() {
 }
 
 function closeModalAndReset() {
-    const modal = document.getElementById('modal');
-    const result = document.getElementById('result');
-    const openButton = document.getElementById('openButton');
-
-    result.style.visibility = 'hidden';
-    modal.style.visibility = 'hidden';
-    openButton.style.visibility = 'hidden';
-    modal.style.height = '0';
-
-    resetForm();
-
-    document.getElementById('closeResultButton').style.display = 'none';
-    document.getElementById('result').innerHTML = '';
-    document.getElementById('userInput').value = '';  
+    window.location.href = 'image.html';
 }
 
 function togglePopup() {

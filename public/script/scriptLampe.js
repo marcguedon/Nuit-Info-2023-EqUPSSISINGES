@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const images = ['public/img/filR1.png', 'public/img/filB1.png', 'public/img/filJ1.png', 'public/img/filRo1.png'];
+    const images = ['public/img/escapeGame/filR1.png', 'public/img/escapeGame/filB1.png', 'public/img/escapeGame/filJ1.png', 'public/img/escapeGame/filRo1.png'];
     const allCards = images.concat(images); // Duplicate the images to create pairs
     let openedCards = [];
     let matchedPairs = 0;

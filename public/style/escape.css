@@ -17,14 +17,14 @@ body{
   max-width: 600px;
 }
 
-.dialogue-box {
+#dialogue-box {
   border: 2px solid black;
   border-radius: 8px;
   padding: 15px;
   background-color: #fff;
 }
 
-.dialogue-box p {
+#dialogue-box p {
   margin: 0;
 }
 
@@ -64,7 +64,7 @@ button {
     position: absolute;
     width: 100vw;
     height: 100%;
-    background: url('../img/fondfonceCLARA.png') no-repeat center center fixed;
+    background: url('../img/escapeGame/fondfonceCLARA.png') no-repeat center center fixed;
     background-size: cover;
     z-index: -2;
 }

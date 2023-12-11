@@ -1,0 +1,102 @@
+body{
+    overflow: hidden;
+}
+
+canvas{
+    background-color: transparent;
+}
+
+button {
+    background-color: #777;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#reponseDialog {
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    background-color: #ffffff; /* Ajoute une couleur de fond au dialogue */
+    padding: 20px; /* Ajoute de l'espace à l'intérieur du dialogue */
+    border: 1px solid #ccc; /* Ajoute une bordure au dialogue */
+    border-radius: 25px;
+    width: 660px; /* Fixe la largeur du dialogue à 300 pixels */
+    height: 220px;
+    background-position: center;
+  }
+  
+#reponseDialog button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #ffffff;
+    color: #0b1026;
+    padding: 3px 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+  
+#reponseDialog p {
+    color: #0b1026;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  
+#questionDialog {
+    position: fixed;
+    top: 40vh;
+    left: 35vw;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-position: center;
+}
+  
+#questionDialog h2 {
+    color: #ffffff;
+    font-size: 0px;
+    margin-bottom: 10px;
+}
+  
+#questionDialog p {
+    color: #0b1026;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+  
+#questionDialog button {
+    background-color: #0b1026;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+  
+#vrai {
+    margin-right: 10px;
+}
+  
+#vfText {
+    margin-left: 20px;
+}
+  
+.interactive-sphere {
+    width: 50px;
+    height: 50px;
+    background-color: #C8AD7F;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+  

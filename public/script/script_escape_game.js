@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('result').innerHTML = 'Félicitations ! Vous avez réussi.';
                 document.getElementById('user-input-form').style.display = 'none';
                 closeResultButton.style.display = 'block';
-                window.location.href = 'cadenas.html';
-                console.log('test');
+                //window.location.href = 'cadenas.html';
             }
             
             else {
@@ -72,7 +71,6 @@ function initializeGame() {
         clickableArea.style.display = 'none';
         document.getElementById('user-input-form').style.display = 'none';
         closeResultButton.style.display = 'block';
-        window.location.href = 'cadenas.html'; 
     }
     
     else {
@@ -81,19 +79,7 @@ function initializeGame() {
 }
 
 function closeModalAndReset() {
-    const modal = document.getElementById('modal');
-    const result = document.getElementById('result');
-    result.style.visibility = 'hidden';
-    modal.style.visibility = 'hidden';
-    const openButton = document.getElementById('openButton');
-    openButton.style.visibility = 'hidden';
-    modal.style.height = '0';
-
-    resetForm();
-    document.getElementById('closeResultButton').style.display = 'none';
-    document.getElementById('result').innerHTML = '';
-    document.getElementById('userInput').value = '';  
-    
+    window.location.href = 'cadenas.html';
 }
 
 function togglePopup() {

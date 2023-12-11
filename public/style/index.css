@@ -7,7 +7,7 @@
     position: fixed;
     justify-content: flex-end;
     top: 160px; /* Ajustez cette valeur pour déplacer la jauge verticalement */
-    right: 20px; /* Ajustez cette valeur pour déplacer la jauge horizontalement */
+    right: 10%; /* Ajustez cette valeur pour déplacer la jauge horizontalement */
 }
 
 .gauge {

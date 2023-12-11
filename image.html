@@ -3,12 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UPSSISINGES - Escape Game 3</title>
-        <link rel="stylesheet" href="public/style/escape_game.css">
+        <title>UPSSISINGES - Escape Game 5</title>
+        <link rel="stylesheet" href="public/style/image.css">
         <link rel="stylesheet" href="public/style/header.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script src="public/script/header.js"></script>
-        <script src="public/script/script_escape_game.js"></script>
     </head>
 
     <body>
@@ -32,35 +31,18 @@
                     <li><a href="tetris.html">Tetris 404</a></li>
                     <li><a href="https://sitequinesistepas.fr">Se connecter</a></li>
                 </ul>
-
+                
                 <button id="bttheme" onclick="toggleSnowfall()"></button>
             </nav>
         </header>
-
-        <div class="game-image">
-            <img src="public/img/escapeGame/fondEscapeGame.png">
+        
+        <div id="content">
+            <button id="start-button">Start Puzzle </button>
         </div>
-
-        <div id="clickable-area" onclick="openModal()"></div>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div id="game-container">
-                    <img id="background-image" src="public/img/escapeGame/pollution.jpg" alt="Background Image">
-                    <p>Instructions: Trouver les lettres cachées afin de former un mot puis appuyer sur le bouton "Jouer"</p>
-                    <form id="user-input-form">
-                        <input type="text" id="userInput">
-                        <button type="button" id="playButton" onclick="initializeGame()">Jouer</button>
-                    </form>
-                    <p id="result"></p>
-                    <button id="closeResultButton" onclick="closeModalAndReset()">Fermer</button>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- Ajout de l'élément canvas pour flocons -->
         <canvas id="snowfall-canvas"></canvas>
         <script src="public/script/script_neige.js"></script>
+        <script src="public/script/image.js"></script>
     </body>
 </html>
