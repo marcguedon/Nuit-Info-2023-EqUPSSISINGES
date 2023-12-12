@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="public/style/3d-theme.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script src="public/script/header.js"></script>
-        <script type="module" src="public/script/3d-theme.js"></script>
         <script src="public/script/script_jauge.js"></script><script type="module">
             import * as THREE from 'https://threejs.org/build/three.module.js';
             
@@ -90,22 +89,18 @@
                     isAQuestionOpen = true;
                     var questionTitle = document.getElementById("questionTitle");
                     var questionText = document.getElementById("questionText");
-                    var vrai = document.getElementById("vrai");
-                    var faux = document.getElementById("faux");
             
                     questionTitle.innerText = `Question ${numeroQuestion + 1}`;
                     questionText.innerText = questions[numeroQuestion];
             
                     var questionDialog = document.getElementById("questionDialog");
 
-                    questionDialog.style.backgroundImage = "url(public/img/Capture_decran_2023-12-08_013651.png)";
-                    questionDialog.style.backgroundSize = "cover";
-
-                    questionDialog.showModal();
+                    questionDialog.style.display = "block";
                 }
             }
     
             function afficherReponse(estVrai) {
+                var questionDialog = document.getElementById("questionDialog");
                 var reponseText = document.getElementById("reponseText");
                 var vfText = document.getElementById("vfText");
                 // Récupérer l'index de la question en cours
@@ -118,9 +113,6 @@
                 popup.close();
                 var reponseDialog = document.getElementById("reponseDialog");
 
-                reponseDialog.style.backgroundImage = "url(public/img/Capture_decran_2023-12-08_013651-sansboule.png)";
-                reponseDialog.style.backgroundSize = "cover";
-
                 if(estVrai == vf[numeroQuestion]){
                     increaseValue();
                 }
@@ -128,7 +120,9 @@
                     decreaseValue();
                 }
 
-                reponseDialog.showModal();
+
+                questionDialog.style.display = "none";
+                reponseDialog.style.display = "block";
             }
     
             function fermerPopup() {
@@ -137,7 +131,7 @@
                 isAQuestionOpen = false;
         
                 // Ferme la fenêtre pop-up
-                popup.close();
+                popup.style.display = "none";
             }
         </script>
 
@@ -179,6 +173,6 @@
 
         <!-- Ajout de l'élément canvas pour flocons -->
         <canvas id="snowfall-canvas"></canvas>
-        <script src="public/script/script_neige.js"></script>
+        <script src="public/script/3d-theme.js"></script>
     </body>
 </html>

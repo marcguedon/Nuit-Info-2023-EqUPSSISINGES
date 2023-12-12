@@ -17,13 +17,13 @@ button {
     position: fixed;
     top: 40vh;
     left: 30vw;
-    background-color: #ffffff; /* Ajoute une couleur de fond au dialogue */
     padding: 20px; /* Ajoute de l'espace à l'intérieur du dialogue */
     border: 1px solid #ccc; /* Ajoute une bordure au dialogue */
     border-radius: 25px;
     width: 660px; /* Fixe la largeur du dialogue à 300 pixels */
     height: 220px;
-    background-position: center;
+    background-image: url("../img/planete/fondReponseSansBoule.png");
+    background-size: 100% 100%;
   }
   
 #reponseDialog button {
@@ -52,12 +52,12 @@ button {
     position: fixed;
     top: 40vh;
     left: 35vw;
-    background-color: #ffffff;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
-    background-position: center;
+    background-image: url("../img/planete/fondReponseSansBoule.png");
+    background-size: 100% 100%;
 }
   
 #questionDialog h2 {
