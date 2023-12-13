@@ -286,12 +286,12 @@ function toggleSnowfall() {
     snowfallEnabled = !snowfallEnabled;
     if (snowfallEnabled) {
         startSnowfall();
-        responseDialog.style.backgroundImage = "url('public/img/planete/fondReponseAvecBoule.png')";
         questionDialog.style.backgroundImage = "url('public/img/planete/fondReponseAvecBoule.png')";
+        responseDialog.style.backgroundImage = "url('public/img/planete/fondReponseSansBoule.png')";
     } else {
         stopSnowfall();
-        responseDialog.style.backgroundImage = "url('public/img/planete/fondReponseSansBoule.png')";
-        questionDialog.style.backgroundImage = "url('public/img/planete/fondReponseSansBoule.png')";
+        questionDialog.style.backgroundImage = "url('public/img/planete/fondPasNoel.png')";
+        responseDialog.style.backgroundImage = "url('public/img/planete/fondPasNoel.png')";
     }
 }
 
